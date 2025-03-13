@@ -149,3 +149,5 @@ let markHigherBMI = bmiMark > bmiJohn;
 const joel = "I'm " + firstName + ' a ' + myAge + " year old " + job;
 // console.log(joel);
 
+const bio = `I'm ${firstName}, a ${myAge} year old ${job}.`
+console.log(bio);
