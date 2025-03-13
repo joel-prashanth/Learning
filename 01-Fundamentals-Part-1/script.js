@@ -1,0 +1,118 @@
+//Values and Variables
+
+let firstName = "Joel";
+
+// console.log(firstName);
+
+let PI = 3.14
+
+
+//Assignment-1
+
+const country = "India";
+const continent = "Asia";
+let population = 1_4_000_000_000
+
+// console.log(country);
+// console.log(continent);
+// console.log(population);
+
+//Datatypes and Dynamic typing
+
+// let jsIsFun = true;
+// console.log(typeof jsIsFun);
+// jsIsFun = 'YES';
+// console.log(typeof jsIsFun);
+
+// let year;
+// console.log(typeof year);
+
+// year = 1998;
+// console.log(typeof year);
+
+// console.log(typeof undefined);
+// console.log(typeof null); //this is a legacy bug
+
+
+//Assignment-2
+
+const isIsland = false;
+let language;
+
+// console.log(isIsland);
+// console.log(population);
+// console.log(language);
+
+//let, const & var
+
+let age = 30;
+age = 31;
+
+const birthYear = 1998;
+// birthYear = 1997; //Uncaught TypeError: Assignment to constant variable.
+
+// const job; //Uncaught SyntaxError: Missing initializer in const declaration
+
+var job = "Developer";
+job = "Engineer";
+
+//Assignment-3
+language = "Tamil";
+// country = "Africa" //Uncaught TypeError: Assignment to constant variable.
+
+//Operators
+
+const now = 2025
+const myAge = now - 1998;
+// console.log(myAge);
+
+// Math +, -, /, *, **, = 
+
+let x = 10;
+// console.log(x);
+x += 10;
+// console.log(x);
+
+x *= 4;
+// console.log(x);
+
+x /= 4;
+// console.log(x);
+
+x++;
+// console.log(x);
+
+// Comparision >, <, >=, <=
+
+let a = 1;
+let b = 2;
+// console.log(a>b, a<b, a>=b, a<=b);
+
+// Assignment-3
+
+population++;
+let finlandPopulation = 6_000_000
+
+let halfPopulation = population / 2;
+const avaeragePopulation = 33_000_000;
+// console.log(population<avaeragePopulation);
+// console.log(population>halfPopulation);
+// console.log(halfPopulation);
+
+let description = "India is a country in Asia and its 69 million speak Tamil."
+
+// console.log(description);
+
+//Precedence of Operators
+
+// console.log(25-10-5); //left to right
+let u,v;
+let w = 5;
+w = 25-10-5;
+// console.log(w);
+u = v = 25-10-5; //u=v=10
+// console.log(u, v);
+let j = 12;
+let k = 15;
+// console.log((j+k)/2);
+
