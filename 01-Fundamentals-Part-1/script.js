@@ -54,7 +54,6 @@ const birthYear = 1998;
 // const job; //Uncaught SyntaxError: Missing initializer in const declaration
 
 var job = "Developer";
-job = "Engineer";
 
 //Assignment-3
 language = "Tamil";
@@ -115,4 +114,38 @@ u = v = 25-10-5; //u=v=10
 let j = 12;
 let k = 15;
 // console.log((j+k)/2);
+
+//Coding Challenges
+
+//Challenge-1
+
+let weightMark = 78;  //95
+let heightMark = 1.69; //1.88
+
+let weightJohn = 92; //85
+let heightJohn = 1.95; //1.76
+
+let bmiJohn;
+let bmiMark;
+
+
+bmiMark = (weightMark / (heightMark**2)).toFixed(1);
+bmiJohn = (weightJohn / (heightJohn ** 2)).toFixed(1);
+// console.log(bmiMark, bmiJohn);
+
+let markHigherBMI = bmiMark > bmiJohn;
+// console.log(markHigherBMI);
+
+// if(markHigherBMI){
+//     console.log( `Mark's BMI ${bmiMark} is higher than John's!`);
+// }
+// else{
+//     console.log( "John's BMI is higher than Mark's!");
+// }
+
+
+// Template Literals
+
+const joel = "I'm " + firstName + ' a ' + myAge + " year old " + job;
+// console.log(joel);
 
