@@ -221,28 +221,55 @@ n = n - 1; // 10 number
 
 const money = 0; //falsy logic
 if(money){
-    console.log(`Don't spend it all!`);
+    // console.log(`Don't spend it all!`);
 }else{
-    console.log(`You should get a job!`);
+    // console.log(`You should get a job!`);
 }
 
 let height = 0;  // falsy let height;
 if(height){
-    console.log('Height is defined!');
+    // console.log('Height is defined!');
 }else{
-    console.log('Height is undefined!');
+    // console.log('Height is undefined!');
 }
 
 // Equality Operators == and ===
 
 const ageVariable = 18;
 if(ageVariable === 18){
-    console.log('You just became an adult!');
+    // console.log('You just became an adult!');
 }
 
-console.log('18' == 18); // true Loose Equality
-console.log('18' === 18); // false Strict Equality
+// console.log('18' == 18); // true Loose Equality
+// console.log('18' === 18); // false Strict Equality
 
 
 //Boolean Logic
+
+const hasLicense = true;
+const goodVision = true;
+
+console.log(hasLicense && goodVision); //AND
+console.log(hasLicense || goodVision); //OR
+console.log(!hasLicense); //NOT
+
+const shouldDrive = hasLicense && goodVision;
+
+// if(shouldDrive){
+//     console.log(`Drive!`);
+// }else{
+//     console.log(`Someone else drive...`);
+// }
+
+const isTired = false;
+// console.log(hasLicense && goodVision && isTired); //AND
+
+
+if(hasLicense && goodVision && !isTired){
+    console.log(`Drive!`);
+}else{
+    console.log(`Someone else drive...`);
+}
+
+
 
