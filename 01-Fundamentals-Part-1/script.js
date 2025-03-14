@@ -150,4 +150,27 @@ const joel = "I'm " + firstName + ' a ' + myAge + " year old " + job;
 // console.log(joel);
 
 const bio = `I'm ${firstName}, a ${myAge} year old ${job}.`
-console.log(bio);
+// console.log(bio);
+
+
+//if-else decision making
+
+const drivingAge = 15;
+const isOldEnough = drivingAge >=18;
+const yearsLeft = 18 - drivingAge;
+
+if(isOldEnough){
+    // console.log(`You can drive!`);
+}else{
+    // console.log(`Not yet! Wait another ${yearsLeft} years.`);
+}
+
+const yearOfBirth = 1998;
+let century;
+
+if(yearOfBirth <= 2000){
+     century = 20;
+}else{
+     century = 21;
+}
+console.log(century);
