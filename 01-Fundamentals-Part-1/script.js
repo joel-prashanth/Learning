@@ -249,9 +249,9 @@ if(ageVariable === 18){
 const hasLicense = true;
 const goodVision = true;
 
-console.log(hasLicense && goodVision); //AND
-console.log(hasLicense || goodVision); //OR
-console.log(!hasLicense); //NOT
+// console.log(hasLicense && goodVision); //AND
+// console.log(hasLicense || goodVision); //OR
+// console.log(!hasLicense); //NOT
 
 const shouldDrive = hasLicense && goodVision;
 
@@ -266,10 +266,33 @@ const isTired = false;
 
 
 if(hasLicense && goodVision && !isTired){
-    console.log(`Drive!`);
+    // console.log(`Drive!`);
 }else{
-    console.log(`Someone else drive...`);
+    // console.log(`Someone else drive...`);
 }
 
 
+// Assignment - 3
 
+//scores 
+let D1 = 96; 
+let D2 = 108;
+let D3 = 89; 
+
+let K1 = 88;
+let K2 = 91;
+let K3 = 110;
+
+
+const minScore = 100;
+
+let dolphinsAverage = (D1 + D2 + D3) / 3;
+let koalasAverage = (K1 + K2 + K3) / 3;
+
+if(dolphinsAverage === koalasAverage && minScore>=100){
+    console.log("It's a tie!");
+}else if(dolphinsAverage>koalasAverage && minScore){
+    console.log("Dolphins played better!");
+}else{
+    console.log("Koalas played better!");
+}
