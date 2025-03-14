@@ -286,13 +286,45 @@ let K3 = 110;
 
 const minScore = 100;
 
-let dolphinsAverage = (D1 + D2 + D3) / 3;
-let koalasAverage = (K1 + K2 + K3) / 3;
+let dolphinsAverage = ((D1 + D2 + D3) / 3).toFixed(0);
+let koalasAverage = ((K1 + K2 + K3) / 3).toFixed(0);
 
-if(dolphinsAverage === koalasAverage && minScore>=100){
-    console.log("It's a tie!");
-}else if(dolphinsAverage>koalasAverage && minScore){
-    console.log("Dolphins played better!");
+// console.log(dolphinsAverage);
+// console.log(koalasAverage);
+
+if(dolphinsAverage === koalasAverage && dolphinsAverage>=minScore||koalasAverage>=minScore){
+    // console.log("It's a tie!");
+}else if(dolphinsAverage>koalasAverage && dolphinsAverage>=minScore){
+    // console.log("Dolphins played better!");
+}else if (dolphinsAverage<koalasAverage && koalasAverage>=minScore){
+    // console.log("Koalas played better!");
 }else{
-    console.log("Koalas played better!");
+    // console.log('No one played well.');
+}
+
+// Switch statement
+
+const day = 'monday';
+
+switch(day){
+    case 'monday': //compares with strict equality.
+        console.log('Shit its monday!');
+        console.log('Go to the office...');
+        break;
+    case 'tuesday':
+        console.log('Keep Learning');
+        break;
+    case 'wednersday':
+    case 'thursday':
+        console.log('Repeat...');
+        break;
+    case 'friday':
+        console.log('Repeat again...');
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('Relax...');
+        break;
+    default:
+        console.log("Eat 5-star do nothing...");
 }
