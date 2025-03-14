@@ -78,3 +78,37 @@ function fruitProcessor(apples, oranges){
 
 const anotherJuice = fruitProcessor(2,3)
 console.log(anotherJuice);
+
+//Assignment-1
+
+//scores 
+// let D1 = 96; 
+// let D2 = 108;
+// let D3 = 89; 
+
+// let K1 = 88;
+// let K2 = 91;
+// let K3 = 110;
+
+
+const minScore = 100;
+
+const calcAverage = (A,B,C) =>{
+    return ((A+B+C)/3).toFixed(0);
+}
+
+const dolphinsAverage = calcAverage(44,23,71); //85, 54, 41
+const koalasAverage = calcAverage(65,54,49); //23, 34, 27
+
+
+
+
+function checkWinner(avgDolphins, avgKoalas){
+    if(avgDolphins > avgKoalas && avgDolphins >= (2*avgKoalas)){
+        console.log(`Dolphins win! (${avgDolphins} vs. ${avgKoalas})`);
+    }else{
+        console.log(`Koalas win! (${avgKoalas} vs. ${avgDolphins})`);
+    }
+}
+
+const winner = checkWinner(dolphinsAverage, koalasAverage)
