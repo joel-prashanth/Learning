@@ -195,7 +195,41 @@ const inputYear = '1991';
 // Guess the output
 
 let n = 1 + "1";
-console.log(n); // '11'
+// console.log(n); // '11'
 
 n = n - 1; // 10 number
-console.log(n);
+// console.log(n);
+
+// Truthy and Falsy values
+
+/*There are 5 falsy vaues which will give false when we apply Boolean conversion:
+
+    1. 0
+    2. ''
+    3. undefined
+    4. null
+    5. NaN
+
+*/
+
+// console.log(Boolean(0));
+// console.log(Boolean(''));
+// console.log(Boolean(undefined));
+// console.log(Boolean(null));
+// console.log(Boolean(NaN));
+// console.log(Boolean({})); // Empty objects are truthy values
+
+const money = 0; //falsy logic
+if(money){
+    console.log(`Don't spend it all!`);
+}else{
+    console.log(`You should get a job!`);
+}
+
+let height = 0;  // falsy let height;
+if(height){
+    console.log('Height is defined!');
+}else{
+    console.log('Height is undefined!');
+}
+
