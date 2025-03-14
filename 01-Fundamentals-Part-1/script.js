@@ -335,4 +335,11 @@ const legalAge = 23;
 // const drink = legalAge >= 19 ? 'wine 🍷' : 'water 🥤';
 // console.log(drink);
 
-console.log(`You can drink ${drink = legalAge >= 19 ? 'wine 🍷' : 'water 🥤'}`);
+// console.log(`You can drink ${drink = legalAge >= 19 ? 'wine 🍷' : 'water 🥤'}`);
+
+//Challenge-4
+
+bill = 700;
+const tip = (bill>50 && bill<300) ? `$${0.15*bill}`: `$${0.2*bill}`;
+
+console.log(`Your bill is $${bill} so you have to tip ${tip}.`);
