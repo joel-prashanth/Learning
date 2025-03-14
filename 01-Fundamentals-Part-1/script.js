@@ -233,3 +233,16 @@ if(height){
     console.log('Height is undefined!');
 }
 
+// Equality Operators == and ===
+
+const ageVariable = 18;
+if(ageVariable === 18){
+    console.log('You just became an adult!');
+}
+
+console.log('18' == 18); // true Loose Equality
+console.log('18' === 18); // false Strict Equality
+
+
+//Boolean Logic
+
