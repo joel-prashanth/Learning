@@ -308,23 +308,31 @@ const day = 'monday';
 
 switch(day){
     case 'monday': //compares with strict equality.
-        console.log('Shit its monday!');
-        console.log('Go to the office...');
+        // console.log('Shit its monday!');
+        // console.log('Go to the office...');
         break;
     case 'tuesday':
-        console.log('Keep Learning');
+        // console.log('Keep Learning');
         break;
     case 'wednersday':
     case 'thursday':
-        console.log('Repeat...');
+        // console.log('Repeat...');
         break;
     case 'friday':
-        console.log('Repeat again...');
+        // console.log('Repeat again...');
         break;
     case 'saturday':
     case 'sunday':
-        console.log('Relax...');
+        // console.log('Relax...');
         break;
     default:
-        console.log("Eat 5-star do nothing...");
+        // console.log("Eat 5-star do nothing...");
 }
+
+//Ternary Operator
+const legalAge = 23;
+
+// const drink = legalAge >= 19 ? 'wine 🍷' : 'water 🥤';
+// console.log(drink);
+
+console.log(`You can drink ${drink = legalAge >= 19 ? 'wine 🍷' : 'water 🥤'}`);
