@@ -173,4 +173,29 @@ if(yearOfBirth <= 2000){
 }else{
      century = 21;
 }
-console.log(century);
+// console.log(century);
+
+//Type conversion 
+
+const inputYear = '1991';
+// console.log(inputYear + 10); //concatenation happens here
+// console.log(Number(inputYear) + 10); //Addition happens here
+// console.log(String(inputYear) + 10); //concatenation happens here
+
+// console.log(Number('Joel')); //NaN
+// console.log(typeof NaN);
+
+// Type Coercion
+
+// console.log('I am ' + 27 + " years old"); // 27 is a number
+// console.log('23' - '10' - 3); // 10
+// console.log('23' + '10' - 3); // 2307
+
+
+// Guess the output
+
+let n = 1 + "1";
+console.log(n); // '11'
+
+n = n - 1; // 10 number
+console.log(n);
