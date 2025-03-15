@@ -158,3 +158,30 @@ console.log(calcAge(years)); //NaN
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 
 console.log(ages);
+
+//Array Operations
+
+
+//Adding elements to the array
+
+friends.push('Randy'); //add to the end
+console.log(friends);
+
+friends.unshift('John'); //add to the start
+console.log(friends);
+
+//Removing elements from an array
+
+friends.pop() //remove last element
+friends.pop()
+console.log(friends);
+
+friends.shift() //remove first element
+console.log(friends);
+
+console.log(friends.indexOf('Joe')); // returns position of element
+console.log(friends.indexOf('Bob')); // -1
+
+
+console.log(friends.includes('Ron')); //true with strict equality
+console.log(friends.includes('John')); //false
