@@ -356,5 +356,7 @@ const calcTip = function (bill) {
   }
    
   
-  console.log(calcAverage(totals));
-  console.log(calcAverage(tips));
+  // console.log(calcAverage(totals));
+  // console.log(calcAverage(tips));
+
+// console.log('Testing Live Server from node.');
