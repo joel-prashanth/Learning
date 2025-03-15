@@ -14,7 +14,7 @@ if(passTest)hasDriversLicense = true;
 //functions - intro
 
 function logger(){
-    console.log(`My name is Joel`);
+    // console.log(`My name is Joel`);
 }
 logger(); //Call, invoke or run the function
 
@@ -58,7 +58,7 @@ const age2 = calculatedAge2(1994)
 
 const calcAge3 = birthYear => 2025 - birthYear;
 const age3 = calcAge3(1990);
-console.log(age1, age2, age3);
+// console.log(age1, age2, age3);
 
 //functions calling other functions
 
@@ -77,7 +77,7 @@ function fruitProcessor(apples, oranges){
 }
 
 const anotherJuice = fruitProcessor(2,3)
-console.log(anotherJuice);
+// console.log(anotherJuice);
 
 //Assignment-1
 
@@ -105,10 +105,56 @@ const koalasAverage = calcAverage(65,54,49); //23, 34, 27
 
 function checkWinner(avgDolphins, avgKoalas){
     if(avgDolphins > avgKoalas && avgDolphins >= (2*avgKoalas)){
-        console.log(`Dolphins win! (${avgDolphins} vs. ${avgKoalas})`);
+        // console.log(`Dolphins win! (${avgDolphins} vs. ${avgKoalas})`);
     }else{
-        console.log(`Koalas win! (${avgKoalas} vs. ${avgDolphins})`);
+        // console.log(`Koalas win! (${avgKoalas} vs. ${avgDolphins})`);
     }
 }
 
-const winner = checkWinner(dolphinsAverage, koalasAverage)
+const winner = checkWinner(dolphinsAverage, koalasAverage);
+
+//Arrays
+
+const friends = ['Ron', 'Joe', 'Mike']; 
+console.log(friends);
+
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+
+console.log(friends[friends.length-1]);
+
+friends[2] = 'Jay'; //Array is not primitive hence it is mutable
+console.log(friends);
+
+// friends = ['Alice', 'Charles'] //Uncaught TypeError: Assignment to constant variable. 
+
+const firstName = 'Joel'
+const joel = [firstName, 'Prashanth', 2025-1998, friends];
+console.log(joel);
+
+//Exercise
+
+const calcAge = function (birthYear){
+    return 2025 - birthYear;
+}
+
+const years = new Array(1991, 1993, 1996, 1981, 2000);
+
+console.log(calcAge(years)); //NaN
+
+// const ageOne = calcAge(years[0]);
+// const ageTwo = calcAge(years[1]);
+// const ageThree = calcAge(years[2]);
+// console.log(calcAge(years[years.length-1]));
+
+// console.log(ageOne);
+// console.log(ageTwo);
+// console.log(ageThree);
+
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+
+console.log(ages);
