@@ -1,117 +1,117 @@
 'use strict';
 
-let hasDriversLicense = false;
-const passTest = true;
+// let hasDriversLicense = false;
+// const passTest = true;
 
-if(passTest)hasDriversLicense = true;
-// if(hasDriversLicense) console.log('I can drive!');
+// if(passTest)hasDriversLicense = true;
+// // if(hasDriversLicense) console.log('I can drive!');
 
 
-//Reserved keywords
-// const interface = 'Audio';
-// const private = 212;
+// //Reserved keywords
+// // const interface = 'Audio';
+// // const private = 212;
 
-//functions - intro
+// //functions - intro
 
-function logger(){
-    // console.log(`My name is Joel`);
-}
-logger(); //Call, invoke or run the function
+// function logger(){
+//     // console.log(`My name is Joel`);
+// }
+// logger(); //Call, invoke or run the function
+
+// // function fruitProcessor(apples, oranges){
+// //     console.log(apples, oranges);
+// //     const juice = `Juice with ${apples} apples and ${oranges} oranges.`
+// //     return juice;
+// // }
+
+// // const mixedFruit = fruitProcessor(2,4);
+// // console.log(mixedFruit);
+
+// // const appleJuice = fruitProcessor(5,0); //arguments
+// // console.log(appleJuice);
+
+// //functions - declaration vs expression
+
+
+// const age1 = calcAge1(1998);
+
+// function calcAge1(birthYear){
+//     return 2025 - birthYear;
+// }
+
+
+// // console.log(age1);
+
+
+// //function expression - anon function
+
+
+// // const age2 = calculatedAge2(1994) //Uncaught ReferenceError: Cannot access 'calculatedAge2' before initialization - Reason: hoisting
+
+// const calculatedAge2 = function (birthYear) {
+//     return 2025 - birthYear;
+// }
+// const age2 = calculatedAge2(1994)
+
+
+// //Arrow functions - Special form of function expressions
+
+// const calcAge3 = birthYear => 2025 - birthYear;
+// const age3 = calcAge3(1990);
+// // console.log(age1, age2, age3);
+
+// //functions calling other functions
+
+// function fruitChopper(fruit){
+//     return fruit*4
+// }
+
 
 // function fruitProcessor(apples, oranges){
-//     console.log(apples, oranges);
-//     const juice = `Juice with ${apples} apples and ${oranges} oranges.`
+//     const applePieces = fruitChopper(apples);
+//     const orangePieces = fruitChopper(oranges);
+
+//     // console.log(apples, oranges);
+//     const juice = `Juice with ${applePieces} apples and ${orangePieces} oranges.`
 //     return juice;
 // }
 
-// const mixedFruit = fruitProcessor(2,4);
-// console.log(mixedFruit);
+// const anotherJuice = fruitProcessor(2,3)
+// // console.log(anotherJuice);
 
-// const appleJuice = fruitProcessor(5,0); //arguments
-// console.log(appleJuice);
+// //Assignment-1
 
-//functions - declaration vs expression
+// //scores 
+// // let D1 = 96; 
+// // let D2 = 108;
+// // let D3 = 89; 
 
-
-const age1 = calcAge1(1998);
-
-function calcAge1(birthYear){
-    return 2025 - birthYear;
-}
-
-
-// console.log(age1);
+// // let K1 = 88;
+// // let K2 = 91;
+// // let K3 = 110;
 
 
-//function expression - anon function
+// const minScore = 100;
 
+// // const calcAverage = (A,B,C) =>{
+// //     return ((A+B+C)/3).toFixed(0);
+// // }
 
-// const age2 = calculatedAge2(1994) //Uncaught ReferenceError: Cannot access 'calculatedAge2' before initialization - Reason: hoisting
-
-const calculatedAge2 = function (birthYear) {
-    return 2025 - birthYear;
-}
-const age2 = calculatedAge2(1994)
-
-
-//Arrow functions - Special form of function expressions
-
-const calcAge3 = birthYear => 2025 - birthYear;
-const age3 = calcAge3(1990);
-// console.log(age1, age2, age3);
-
-//functions calling other functions
-
-function fruitChopper(fruit){
-    return fruit*4
-}
-
-
-function fruitProcessor(apples, oranges){
-    const applePieces = fruitChopper(apples);
-    const orangePieces = fruitChopper(oranges);
-
-    // console.log(apples, oranges);
-    const juice = `Juice with ${applePieces} apples and ${orangePieces} oranges.`
-    return juice;
-}
-
-const anotherJuice = fruitProcessor(2,3)
-// console.log(anotherJuice);
-
-//Assignment-1
-
-//scores 
-// let D1 = 96; 
-// let D2 = 108;
-// let D3 = 89; 
-
-// let K1 = 88;
-// let K2 = 91;
-// let K3 = 110;
-
-
-const minScore = 100;
-
-const calcAverage = (A,B,C) =>{
-    return ((A+B+C)/3).toFixed(0);
-}
-
-const dolphinsAverage = calcAverage(44,23,71); //85, 54, 41
-const koalasAverage = calcAverage(65,54,49); //23, 34, 27
+// // const dolphinsAverage = calcAverage(44,23,71); //85, 54, 41
+// // const koalasAverage = calcAverage(65,54,49); //23, 34, 27
 
 
 
 
-function checkWinner(avgDolphins, avgKoalas){
-    if(avgDolphins > avgKoalas && avgDolphins >= (2*avgKoalas)){
-        // console.log(`Dolphins win! (${avgDolphins} vs. ${avgKoalas})`);
-    }else{
-        // console.log(`Koalas win! (${avgKoalas} vs. ${avgDolphins})`);
-    }
-}
+// function checkWinner(avgDolphins, avgKoalas){
+//     if(avgDolphins > avgKoalas && avgDolphins >= (2*avgKoalas)){
+//         // console.log(`Dolphins win! (${avgDolphins} vs. ${avgKoalas})`);
+//     }else{
+//         // console.log(`Koalas win! (${avgKoalas} vs. ${avgDolphins})`);
+//     }
+// }
 
-const winner = checkWinner(dolphinsAverage, koalasAverage);
+// const winner = checkWinner(dolphinsAverage, koalasAverage);
 
 //Arrays
 
@@ -188,23 +188,23 @@ friends.shift() //remove first element
 
 //Coding Challenge-2
 
-const calcTip = function(bill){
-    let tip;
-    if(bill>50 && bill<=300){
-        tip = 0.15*bill;
-    }
-    else{
-        tip = 0.2*bill;
-    }
-    return tip;
-} 
+// const calcTip = function(bill){
+//     let tip;
+//     if(bill>50 && bill<=300){
+//         tip = 0.15*bill;
+//     }
+//     else{
+//         tip = 0.2*bill;
+//     }
+//     return tip;
+// } 
 // console.log(calcTip(100)); //test calcTip
 
-const bills = [125, 555, 44];
+// const bills = [125, 555, 44];
 
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 
-const totals = [tips[0]+bills[0], tips[1]+bills[1], tips[2]+bills[2]];
+// const totals = [tips[0]+bills[0], tips[1]+bills[1], tips[2]+bills[2]];
 
 // console.log(`Tips: ${tips}`);
 // console.log(`Totals: ${totals}`);
@@ -302,28 +302,59 @@ const joelObject = {
 
 //Coding Challenge-3
 
-const john = {
-    firstName: "John",
-    lastName: "Smith",
-    mass: 92,
-    height: 1.95,
-    calcBMI: function(){
-        return (this.mass / (this.height**2)).toFixed(0);
-    }
-}
+// const john = {
+//     firstName: "John",
+//     lastName: "Smith",
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function(){
+//         return (this.mass / (this.height**2)).toFixed(0);
+//     }
+// }
 
-const mark = {
-    firstName: "Mark",
-    lastName: "Miller",
-    mass: 78,
-    height: 1.65,
-    calcBMI: function(){
-        return (this.mass / (this.height**2)).toFixed(0);
-    }
-}
+// const mark = {
+//     firstName: "Mark",
+//     lastName: "Miller",
+//     mass: 78,
+//     height: 1.65,
+//     calcBMI: function(){
+//         return (this.mass / (this.height**2)).toFixed(0);
+//     }
+// }
 
-if(john.calcBMI > mark.calcBMI){
-    console.log(`${john.firstName}'s BMI (${john.calcBMI()}) is higher than ${mark.firstName}'s BMI (${mark.calcBMI()}).`);
-}else{
-    console.log(`${mark.firstName}'s BMI (${mark.calcBMI()}) is higher than ${john.firstName}'s BMI (${john.calcBMI()}).`);
-}
+// if(john.calcBMI > mark.calcBMI){
+//     console.log(`${john.firstName}'s BMI (${john.calcBMI()}) is higher than ${mark.firstName}'s BMI (${mark.calcBMI()}).`);
+// }else{
+//     console.log(`${mark.firstName}'s BMI (${mark.calcBMI()}) is higher than ${john.firstName}'s BMI (${john.calcBMI()}).`);
+// }
+
+//Loops
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+  }
+   
+   
+  const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+  const tips = [];
+  const totals = [];
+   
+  for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+  }
+   
+//   console.log(bills, tips, totals);
+   
+  const calcAverage = function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      // sum = sum + arr[i];
+      sum += arr[i];
+    }
+    return sum / arr.length;
+  }
+   
+  
+  console.log(calcAverage(totals));
+  console.log(calcAverage(tips));
