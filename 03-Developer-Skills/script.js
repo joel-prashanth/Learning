@@ -13,26 +13,43 @@ You are planning to buy groceries and have a fixed budget. You need to write a J
     If over budget → "Over budget! You need ₹Y more."
 */
 
-const budget = 200; 
-const groceries = [
-  { name: "Rice", price: 200 },
-  { name: "Oil", price: 150 },
-  { name: "Milk", price: 80 },
-  { name: "Eggs", price: 100 }
-];
+// const budget = 200; 
+// const groceries = [
+//   { name: "Rice", price: 200 },
+//   { name: "Oil", price: 150 },
+//   { name: "Milk", price: 80 },
+//   { name: "Eggs", price: 100 }
+// ];
 
-const groceryBudgetCheck = function(budget, groceries){
-    let cost =0;
-    if(budget!==0){
-        for(let item=0;item<groceries.length;item++){
-            cost += groceries[item]["price"];
-        }
-        if(cost>budget){
-            return `Over budget! You need ₹${cost-budget} more.`
-        } else return `You are within budget. Total cost: ₹${cost}`
+// const groceryBudgetCheck = function(budget, groceries){
+//     let cost =0;
+//     if(budget!==0){
+//         for(let item=0;item<groceries.length;item++){
+//             cost += groceries[item]["price"];
+//         }
+//         if(cost>budget){
+//             return `Over budget! You need ₹${cost-budget} more.`
+//         } else return `You are within budget. Total cost: ₹${cost}`
     
+//     }
+// }
+
+// console.log(groceryBudgetCheck(budget, groceries));
+
+
+//DEBUG
+
+function countEvens(numbers) {
+    let count = 0;
+    for (let i = 0; i <= numbers.length; i++) {  
+        if (numbers[i] % 2 === 0) {  
+            count += 1;  
+        }
     }
+    return count;
 }
 
-console.log(groceryBudgetCheck(budget, groceries));
+const nums = [1, 2, 3, 4, 5, 6, 8];
+console.log(countEvens(nums));  // Expected output: 4
+
 
