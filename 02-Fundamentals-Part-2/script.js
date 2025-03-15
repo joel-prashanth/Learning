@@ -116,24 +116,24 @@ const winner = checkWinner(dolphinsAverage, koalasAverage);
 //Arrays
 
 const friends = ['Ron', 'Joe', 'Mike']; 
-console.log(friends);
+// console.log(friends);
 
 
-console.log(friends[0]);
-console.log(friends[2]);
+// console.log(friends[0]);
+// console.log(friends[2]);
 
-console.log(friends.length);
+// console.log(friends.length);
 
-console.log(friends[friends.length-1]);
+// console.log(friends[friends.length-1]);
 
 friends[2] = 'Jay'; //Array is not primitive hence it is mutable
-console.log(friends);
+// console.log(friends);
 
 // friends = ['Alice', 'Charles'] //Uncaught TypeError: Assignment to constant variable. 
 
 const firstName = 'Joel'
 const joel = [firstName, 'Prashanth', 2025-1998, friends];
-console.log(joel);
+// console.log(joel);
 
 //Exercise
 
@@ -143,7 +143,7 @@ const calcAge = function (birthYear){
 
 const years = new Array(1991, 1993, 1996, 1981, 2000);
 
-console.log(calcAge(years)); //NaN
+// console.log(calcAge(years)); //NaN
 
 // const ageOne = calcAge(years[0]);
 // const ageTwo = calcAge(years[1]);
@@ -157,7 +157,7 @@ console.log(calcAge(years)); //NaN
 
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 
-console.log(ages);
+// console.log(ages);
 
 //Array Operations
 
@@ -165,23 +165,49 @@ console.log(ages);
 //Adding elements to the array
 
 friends.push('Randy'); //add to the end
-console.log(friends);
+// console.log(friends);
 
 friends.unshift('John'); //add to the start
-console.log(friends);
+// console.log(friends);
 
 //Removing elements from an array
 
 friends.pop() //remove last element
 friends.pop()
-console.log(friends);
+// console.log(friends);
 
 friends.shift() //remove first element
-console.log(friends);
+// console.log(friends);
 
-console.log(friends.indexOf('Joe')); // returns position of element
-console.log(friends.indexOf('Bob')); // -1
+// console.log(friends.indexOf('Joe')); // returns position of element
+// console.log(friends.indexOf('Bob')); // -1
 
 
-console.log(friends.includes('Ron')); //true with strict equality
-console.log(friends.includes('John')); //false
+// console.log(friends.includes('Ron')); //true with strict equality
+// console.log(friends.includes('John')); //false
+
+//Coding Challenge-2
+
+const calcTip = function(bill){
+    let tip;
+    if(bill>50 && bill<=300){
+        tip = 0.15*bill;
+    }
+    else{
+        tip = 0.2*bill;
+    }
+    return tip;
+} 
+// console.log(calcTip(100)); //test calcTip
+
+const bills = [125, 555, 44];
+
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+const totals = [tips[0]+bills[0], tips[1]+bills[1], tips[2]+bills[2]];
+
+console.log(`Tips: ${tips}`);
+console.log(`Totals: ${totals}`);
+
+
+
