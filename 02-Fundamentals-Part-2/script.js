@@ -206,8 +206,95 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 
 const totals = [tips[0]+bills[0], tips[1]+bills[1], tips[2]+bills[2]];
 
-console.log(`Tips: ${tips}`);
-console.log(`Totals: ${totals}`);
+// console.log(`Tips: ${tips}`);
+// console.log(`Totals: ${totals}`);
+
+//Intro to Objects
+
+// const joelObject = {
+//     firstName: 'Joel',
+//     lastName: 'Prashanth',
+//     age: 25,
+//     job: 'Engineer',
+//     friends: ['Ron', 'Peter', 'Steven']
+// }
+// console.log(joelObject);
+
+//Dot vs Bracket Notoation
+
+// console.log(joelObject.lastName);
+// console.log(joelObject["lastName"]); // You can put any expression within [] just like for arrays.
+
+// const namekey = 'Name'
+// console.log(joelObject["first" + namekey]);
+// console.log(joelObject["last" + namekey]);
+
+// const interestedIn = prompt(`What do you want to know about Joel?`);
+// console.log(interestedIn);
+// console.log(joelObject[interestedIn])
+
+// if(joelObject[interestedIn]){
+//     console.log(joelObject[interestedIn]);
+// }else{
+//     console.log('Wrong request!');
+// }
+
+// joelObject.location = "Chennai";
+// joelObject['instagram'] = "@itzzmejoey";
+
+// console.log(joelObject);
+
+//Challenge
+
+//'Joel has 3 friends and Peter is his best friend.
+
+// console.log(`${joelObject["firstName"]} has ${joelObject["friends"].length} friends and his best friend is ${joelObject["friends"][1]}.`);
+
+//Object Methods
+
+const joelObject = {
+    firstName: "Joel",
+    lastName: "Prashanth",
+    birthYear: 1998,
+    job: "Engineer",
+    friends: ['Ron', 'Peter', 'David'],
+    hasDriversLicense: true,
+
+    // calcAge: function(birthYear){
+    //     return 2025 - birthYear;
+    // }
+
+    // calcAge: function(){
+    //     console.log(this); //this - reference the object itself
+    //     return 2025 - this.birthYear;
+    // }
+
+    calcAge: function(){
+        // console.log(this); //this - reference the object itself
+        this.age = 2025 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function(){
+        return `${this.firstName} is a good boy. He is ${this.calcAge()} years old. He was born in ${this.birthYear}. He has ${this.friends.length} friends. His best friend is ${this.friends[0]}. He works as an ${this.job} and can he drive? - ${this.hasDriversLicense} he can!`
+    }
+
+};
 
 
 
+
+// console.log(joelObject["calcAge"](1998)); //bracket notation
+
+//Follow DRY principle
+// console.log(joelObject.calcAge(joelObject.birthYear)); 
+// console.log(joelObject["calcAge"](joelObject["birthYear"]));
+
+// console.log(joelObject.calcAge()); // without calling this method if you try to access age you will get 'undefined'.
+
+console.log(joelObject.calcAge());
+// console.log(joelObject.age);
+
+//Challenge
+
+console.log(joelObject.getSummary());
