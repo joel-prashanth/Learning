@@ -292,9 +292,38 @@ const joelObject = {
 
 // console.log(joelObject.calcAge()); // without calling this method if you try to access age you will get 'undefined'.
 
-console.log(joelObject.calcAge());
+// console.log(joelObject.calcAge());
 // console.log(joelObject.age);
 
 //Challenge
 
-console.log(joelObject.getSummary());
+// console.log(joelObject.getSummary());
+
+
+//Coding Challenge-3
+
+const john = {
+    firstName: "John",
+    lastName: "Smith",
+    mass: 92,
+    height: 1.95,
+    calcBMI: function(){
+        return (this.mass / (this.height**2)).toFixed(0);
+    }
+}
+
+const mark = {
+    firstName: "Mark",
+    lastName: "Miller",
+    mass: 78,
+    height: 1.65,
+    calcBMI: function(){
+        return (this.mass / (this.height**2)).toFixed(0);
+    }
+}
+
+if(john.calcBMI > mark.calcBMI){
+    console.log(`${john.firstName}'s BMI (${john.calcBMI()}) is higher than ${mark.firstName}'s BMI (${mark.calcBMI()}).`);
+}else{
+    console.log(`${mark.firstName}'s BMI (${mark.calcBMI()}) is higher than ${john.firstName}'s BMI (${john.calcBMI()}).`);
+}
