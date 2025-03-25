@@ -302,4 +302,176 @@ const ratingStars = [63405, 1808];
 const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
 // console.log(fiveStarRatings, oneStarRatings, threeStarRatings);
 
-//
+//Destructuring Objects
+
+//2.1
+const { title, author, ISBN } = books[0];
+// console.log(title, author, ISBN);
+
+//2.2
+// const { keywords: tags } = books[0];
+// console.log(tags);
+
+//2.3
+// const { language, programmingLanguage = 'unknown' } = books[6];
+// console.log(language, programmingLanguage);
+
+//2.4
+let bookTitle = 'unknown';
+let bookAuthor = 'unknown';
+({ title: bookTitle, author: bookAuthor } = books[4]);
+// console.log(bookTitle, bookAuthor);
+
+//2.5
+const {
+  thirdParty: {
+    goodreads: { rating: bookRating },
+  },
+} = books[0];
+// console.log(bookRating);
+
+//2.6
+
+function printBookInfo({title, author, year = 'year unknown'}) {
+  console.log(`${title} by ${author}, ${year}`);
+}
+
+
+//3.1 Spread Operator
+
+const arr = [1,2,3];
+// const newArr = [1,0,arr[0],arr[1],arr[2]];
+
+const newArr = [1,0, ...arr];
+// console.log(newArr);
+// console.log(...newArr);
+
+
+
+const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+  orderDelivery: function({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    address,
+  }) {
+    console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+  },
+
+  orderPasta: function(ing1, ing2, ing3){
+    return `Here is you pasta with ${ing1}, ${ing2} and ${ing3}!`;
+
+  }
+};
+
+
+// console.log(restaurant.mainMenu);
+
+const newMenu = [...restaurant.mainMenu, 'Gnucci'];
+
+// console.log(newMenu);
+
+//Copy array
+
+const mainMenuCopy = [...restaurant.mainMenu];
+// console.log(mainMenuCopy);
+
+// join 2 or more array
+
+const completeMenu = [...restaurant.starterMenu, ...restaurant.mainMenu ];
+// console.log(completeMenu);
+
+//Iterables are everything except objects
+
+// const ingredients = [prompt("Let's make pasta! Ingredient 1?"),prompt("Ingredient 2?"), prompt("Ingredient 3?")];
+
+
+// console.log(restaurant.orderPasta(...ingredients));
+
+
+const newRestaurant = {...restaurant, founder: 'Joel', year: 1998};
+
+// console.log(newRestaurant);
+
+
+const restoCopy = {...restaurant};
+restoCopy.name = "Resto Roma";
+
+console.log(restaurant);
+console.log(restoCopy);
+
+
+
+// const restaurant = {
+//   name: 'Classico Italiano',
+//   location: 'Via Angelo Tavanti 23, Firenze, Italy',
+//   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+//   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+//   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+//   openingHours: {
+//     thu: {
+//       open: 12,
+//       close: 22,
+//     },
+//     fri: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sat: {
+//       open: 0, // open 24h
+//       close: 24,
+//     },
+//   },
+//   order: function (starterIndex, mainIndex) {
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//   },
+//   orderDelivery: function (starterIndex, mainIndex, address, time) {
+//     console.log(`Order received! ${this.starterMenu[starterIndex]}, ${this.mainMenu[mainIndex]} to ${this.address}`);
+//   },
+// };
+
+
+
+
+// restaurant.orderDelivery({
+//   time: '23:30',
+//   address: 'Earth',
+//   mainIndex: 1,
+//   starterIndex: 2,
+// });
+
+// const { name, openingHours, categories } = restaurant;
+// // console.log(name, openingHours, categories);
+
+// const { name: restoName, openingHours: hours, categories: tags } = restaurant;
+
+// // console.log(restoName, hours, tags);
+
+// //Default values
+
+// const { menu = [], starterMenu: starters = [] } = restaurant;
+// // console.log(menu);
+// // console.log(starters);
+
+// //Mutating Variables
+// let a = 1;
+// let b = 2;
+// const obj = { a: 23, b: 7, c: 14 };
+
+// ({ a, b } = obj);
+// // console.log(a,b);
+
+// //Nested objects
+
+// const {
+//   fri: { open: o, close: c },
+// } = openingHours;
+// // console.log(o, c);
