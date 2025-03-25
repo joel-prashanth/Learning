@@ -332,21 +332,18 @@ const {
 
 //2.6
 
-function printBookInfo({title, author, year = 'year unknown'}) {
+function printBookInfo({ title, author, year = 'year unknown' }) {
   console.log(`${title} by ${author}, ${year}`);
 }
 
-
 //3.1 Spread Operator
 
-const arr = [1,2,3];
+const arr = [1, 2, 3];
 // const newArr = [1,0,arr[0],arr[1],arr[2]];
 
-const newArr = [1,0, ...arr];
+const newArr = [1, 0, ...arr];
 // console.log(newArr);
 // console.log(...newArr);
-
-
 
 const restaurant = {
   name: 'Classico Italiano',
@@ -357,21 +354,39 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
-  orderDelivery: function({
+  orderDelivery: function ({
     starterIndex = 1,
     mainIndex = 0,
     time = '20:00',
     address,
   }) {
-    console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
   },
 
-  orderPasta: function(ing1, ing2, ing3){
+  orderPasta: function (ing1, ing2, ing3) {
     return `Here is you pasta with ${ing1}, ${ing2} and ${ing3}!`;
-
-  }
+  },
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // open 24h
+      close: 24,
+    },
+  },
 };
-
 
 // console.log(restaurant.mainMenu);
 
@@ -386,27 +401,73 @@ const mainMenuCopy = [...restaurant.mainMenu];
 
 // join 2 or more array
 
-const completeMenu = [...restaurant.starterMenu, ...restaurant.mainMenu ];
+const completeMenu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 // console.log(completeMenu);
 
 //Iterables are everything except objects
 
 // const ingredients = [prompt("Let's make pasta! Ingredient 1?"),prompt("Ingredient 2?"), prompt("Ingredient 3?")];
 
-
 // console.log(restaurant.orderPasta(...ingredients));
 
-
-const newRestaurant = {...restaurant, founder: 'Joel', year: 1998};
+const newRestaurant = { ...restaurant, founder: 'Joel', year: 1998 };
 
 // console.log(newRestaurant);
 
+const restoCopy = { ...restaurant };
+restoCopy.name = 'Resto Roma';
 
-const restoCopy = {...restaurant};
-restoCopy.name = "Resto Roma";
+// console.log(restaurant);
+// console.log(restoCopy);
 
-console.log(restaurant);
-console.log(restoCopy);
+//Rest Operator - Pack into an array
+
+const [a, b, ...others] = [1, 2, 3, 4, 5]; //... is on the left-hand of the = operator
+
+// console.log(a, b, others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+// console.log(pizza, risotto, otherFood);
+
+const { sat, ...weekdays } = restaurant.openingHours;
+// console.log(sat, weekdays);
+
+//Rest operator as an argument to a function
+
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i <= numbers.length - 1; i++) {
+    sum += numbers[i];
+  }
+  return sum;
+};
+
+// console.log(add(2, 3));
+// console.log(add(23, 555, 234, 160));
+
+const x = [12, 13, 14];
+// console.log(add(...x));
+
+restaurant.orderPizza('mushrooms', 'onions', 'olives', 'spinach');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -437,9 +498,6 @@ console.log(restoCopy);
 //     console.log(`Order received! ${this.starterMenu[starterIndex]}, ${this.mainMenu[mainIndex]} to ${this.address}`);
 //   },
 // };
-
-
-
 
 // restaurant.orderDelivery({
 //   time: '23:30',
