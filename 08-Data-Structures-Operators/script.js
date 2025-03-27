@@ -451,22 +451,36 @@ const add = function (...numbers) {
 const x = [12, 13, 14];
 // console.log(add(...x));
 
-restaurant.orderPizza('mushrooms', 'onions', 'olives', 'spinach');
+// restaurant.orderPizza('mushrooms', 'onions', 'olives', 'spinach');
 
+//Short Circuiting with && and || operators
+// Logical operators can use and return any datatype and can perform something called short-circuiting
 
+// || - Tells the first truthy value
+// console.log(3 || 'Joel'); //3
+// console.log(0 || 'Joel'); //Joel
 
+// // && - Tells the first falsy value
 
+// console.log(3 && 'Joel' && null); //null
+// console.log(0 && 'Joel'); //0
+// console.log(undefined && 'Joel'); //undefined
 
+// restaurant.numGuestss = 23;
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guests1);
 
+// const guests2 = restaurant.numGuests || 20
+// console.log(guests2);
 
+//Nullish coaleasing operator
 
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests);
 
-
-
-
-
-
-
+const correctGuests = restaurant.numGuests ?? 10; //works with nullish values instead of falsy values ie null and undefined
+console.log(correctGuests);
 
 
 
