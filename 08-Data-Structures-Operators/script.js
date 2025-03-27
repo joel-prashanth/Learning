@@ -475,12 +475,33 @@ const x = [12, 13, 14];
 
 //Nullish coaleasing operator
 
-restaurant.numGuests = 0;
-const guests = restaurant.numGuests || 10;
-console.log(guests);
+// restaurant.numGuests = 0;
+// const guests = restaurant.numGuests || 10;
+// console.log(guests);
 
-const correctGuests = restaurant.numGuests ?? 10; //works with nullish values instead of falsy values ie null and undefined
-console.log(correctGuests);
+// const correctGuests = restaurant.numGuests ?? 10; //works with nullish values instead of falsy values ie null and undefined
+// console.log(correctGuests);
+
+//logical assignment 
+
+const rest1 = {
+  name: 'Blues',
+  numGuests: 20,
+}
+
+
+const rest2 = {
+  name: 'Reds',
+  owner: 'Rue'
+}
+
+rest2.numGuests = rest1.numGuests ||  10;
+
+rest1.owner = rest1.owner && '<ANONYMOUS>'; //undefined
+rest2.owner = rest2.owner && '<ANONYMOUS>'; //<ANONYMOUS>
+
+console.table(rest2);
+
 
 
 
