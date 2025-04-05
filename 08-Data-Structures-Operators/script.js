@@ -666,5 +666,20 @@ const values = Object.values(hours);
 const entries = Object.entries(hours);
 // console.log(entries);
 
-for (const [key, { open, close }] of entries)
-  console.log(`On ${key} we open at ${open} and close at ${close} hours.`);
+// for (const [key, { open, close }] of entries)
+//   console.log(`On ${key} we open at ${open} and close at ${close} hours.`);
+
+for (const [index, player] of game.scored.entries()){
+  console.log(`Goal ${index+1}: ${player}`);
+}
+
+
+const odds = game.odds;
+// console.log(odds);
+
+let sum = 0;
+for (const odd of Object.values(odds)){
+  
+  sum += odd;
+}
+console.log(Math.trunc(sum/3));
