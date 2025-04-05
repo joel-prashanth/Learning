@@ -500,7 +500,82 @@ rest2.numGuests = rest1.numGuests ||  10;
 rest1.owner = rest1.owner && '<ANONYMOUS>'; //undefined
 rest2.owner = rest2.owner && '<ANONYMOUS>'; //<ANONYMOUS>
 
-console.table(rest2);
+// console.table(rest2);
+
+const game = { 
+  team1: 'Bayern Munich', 
+  team2: 'Borrussia Dortmund', 
+  players: [ 
+    [ 
+      'Neuer', 
+      'Pavard', 
+      'Martinez', 
+      'Alaba', 
+      'Davies', 
+      'Kimmich', 
+      'Goretzka', 
+      'Coman', 
+      'Muller', 
+      'Gnarby', 
+      'Lewandowski', 
+    ], 
+    [ 
+      'Burki', 
+      'Schulz', 
+      'Hummels', 
+      'Akanji', 
+      'Hakimi', 
+      'Weigl', 
+      'Witsel', 
+      'Hazard', 
+      'Brandt', 
+      'Sancho', 
+      'Gotze', 
+    ], 
+  ], 
+  score: '4:0', 
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski',  
+  'Hummels'], 
+  date: 'Nov 9th, 2037', 
+  odds: { 
+    team1: 1.33, 
+    x: 3.25, 
+    team2: 6.5, 
+  }, 
+};
+
+const [players1, players2] = game.players
+// console.log(players1);
+// console.log(players2);
+
+const [gk1, ...fieldPlayers1] = players1;
+const [gk2, ...fieldPlayers2] = players2;
+
+const allPlayers = [...players1, ...players2];
+
+const playersFinal = [...players1,'Thiago', 'Courtinho', 'Perisic'];
+console.log(game.odds);
+
+const {team1, x: draw, team2} = game.odds;
+// console.log(team1);
+// console.log(draw);
+// console.log(team2);
+
+
+
+// console.log(playersFinal);
+// console.log(allPlayers);
+// console.log(gk);
+// console.log(fieldPlayers);
+
+
+
+
+
+// console.log(game.players);
+
+
+
 
 
 
@@ -568,3 +643,4 @@ console.table(rest2);
 //   fri: { open: o, close: c },
 // } = openingHours;
 // // console.log(o, c);
+
