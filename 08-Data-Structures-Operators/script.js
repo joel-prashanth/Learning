@@ -345,6 +345,21 @@ const newArr = [1, 0, ...arr];
 // console.log(newArr);
 // console.log(...newArr);
 
+const hours = {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+  sat: {
+    open: 0, // open 24h
+    close: 24,
+  },
+};
+
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -372,20 +387,7 @@ const restaurant = {
     console.log(mainIngredient);
     console.log(otherIngredients);
   },
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // open 24h
-      close: 24,
-    },
-  },
+  hours,
 };
 
 // console.log(restaurant.mainMenu);
@@ -432,7 +434,7 @@ const [pizza, , risotto, ...otherFood] = [
 ];
 // console.log(pizza, risotto, otherFood);
 
-const { sat, ...weekdays } = restaurant.openingHours;
+const { sat, ...weekdays } = restaurant.hours;
 // console.log(sat, weekdays);
 
 //Rest operator as an argument to a function
@@ -482,69 +484,67 @@ const x = [12, 13, 14];
 // const correctGuests = restaurant.numGuests ?? 10; //works with nullish values instead of falsy values ie null and undefined
 // console.log(correctGuests);
 
-//logical assignment 
+//logical assignment
 
 const rest1 = {
   name: 'Blues',
   numGuests: 20,
-}
-
+};
 
 const rest2 = {
   name: 'Reds',
-  owner: 'Rue'
-}
+  owner: 'Rue',
+};
 
-rest2.numGuests = rest1.numGuests ||  10;
+rest2.numGuests = rest1.numGuests || 10;
 
 rest1.owner = rest1.owner && '<ANONYMOUS>'; //undefined
 rest2.owner = rest2.owner && '<ANONYMOUS>'; //<ANONYMOUS>
 
 // console.table(rest2);
 
-const game = { 
-  team1: 'Bayern Munich', 
-  team2: 'Borrussia Dortmund', 
-  players: [ 
-    [ 
-      'Neuer', 
-      'Pavard', 
-      'Martinez', 
-      'Alaba', 
-      'Davies', 
-      'Kimmich', 
-      'Goretzka', 
-      'Coman', 
-      'Muller', 
-      'Gnarby', 
-      'Lewandowski', 
-    ], 
-    [ 
-      'Burki', 
-      'Schulz', 
-      'Hummels', 
-      'Akanji', 
-      'Hakimi', 
-      'Weigl', 
-      'Witsel', 
-      'Hazard', 
-      'Brandt', 
-      'Sancho', 
-      'Gotze', 
-    ], 
-  ], 
-  score: '4:0', 
-  scored: ['Lewandowski', 'Gnarby', 'Lewandowski',  
-  'Hummels'], 
-  date: 'Nov 9th, 2037', 
-  odds: { 
-    team1: 1.33, 
-    x: 3.25, 
-    team2: 6.5, 
-  }, 
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
 };
 
-const [players1, players2] = game.players
+const [players1, players2] = game.players;
 // console.log(players1);
 // console.log(players2);
 
@@ -553,33 +553,20 @@ const [gk2, ...fieldPlayers2] = players2;
 
 const allPlayers = [...players1, ...players2];
 
-const playersFinal = [...players1,'Thiago', 'Courtinho', 'Perisic'];
+const playersFinal = [...players1, 'Thiago', 'Courtinho', 'Perisic'];
 // console.log(game.odds);
 
-const {team1, x: draw, team2} = game.odds;
+const { team1, x: draw, team2 } = game.odds;
 // console.log(team1);
 // console.log(draw);
 // console.log(team2);
-
-
 
 // console.log(playersFinal);
 // console.log(allPlayers);
 // console.log(gk);
 // console.log(fieldPlayers);
 
-
-
-
-
 // console.log(game.players);
-
-
-
-
-
-
-
 
 // const restaurant = {
 //   name: 'Classico Italiano',
@@ -587,7 +574,7 @@ const {team1, x: draw, team2} = game.odds;
 //   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
 //   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
 //   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-//   openingHours: {
+//   hours: {
 //     thu: {
 //       open: 12,
 //       close: 22,
@@ -616,10 +603,10 @@ const {team1, x: draw, team2} = game.odds;
 //   starterIndex: 2,
 // });
 
-// const { name, openingHours, categories } = restaurant;
-// // console.log(name, openingHours, categories);
+// const { name, hours, categories } = restaurant;
+// // console.log(name, hours, categories);
 
-// const { name: restoName, openingHours: hours, categories: tags } = restaurant;
+// const { name: restoName, hours: hours, categories: tags } = restaurant;
 
 // // console.log(restoName, hours, tags);
 
@@ -641,15 +628,43 @@ const {team1, x: draw, team2} = game.odds;
 
 // const {
 //   fri: { open: o, close: c },
-// } = openingHours;
+// } = hours;
 // // console.log(o, c);
 
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
-console.log(menu);
+// console.log(menu);
 
 // for (const item of menu) console.log(item);
 
-for (const [i, el] of menu.entries()) {
-  console.log(`${i+1}: ${el}`);
-}
+// for (const [i, el] of menu.entries()) {
+//   console.log(`${i+1}: ${el}`);
+// }
+
+// console.log(restaurant);
+
+//Nullish coaleasing operator and optional chaining
+
+// console.log(restaurant.order?.(0,1) ?? 'Method does not exist');
+// console.log(restaurant.orderRissoto?.(0,1) ?? 'Method does not exist');
+
+//Property names
+
+const properties = Object.keys(hours);
+// console.log(properties);
+
+// for (const day of Object.keys(hours)) console.log(day);
+
+//Property values
+
+const values = Object.values(hours);
+// console.log(values);
+// for (const val of values) console.log(val);
+
+// key-value entries
+
+const entries = Object.entries(hours);
+// console.log(entries);
+
+for (const [key, { open, close }] of entries)
+  console.log(`On ${key} we open at ${open} and close at ${close} hours.`);
