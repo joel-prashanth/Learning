@@ -554,7 +554,7 @@ const [gk2, ...fieldPlayers2] = players2;
 const allPlayers = [...players1, ...players2];
 
 const playersFinal = [...players1,'Thiago', 'Courtinho', 'Perisic'];
-console.log(game.odds);
+// console.log(game.odds);
 
 const {team1, x: draw, team2} = game.odds;
 // console.log(team1);
@@ -644,3 +644,12 @@ const {team1, x: draw, team2} = game.odds;
 // } = openingHours;
 // // console.log(o, c);
 
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+console.log(menu);
+
+// for (const item of menu) console.log(item);
+
+for (const [i, el] of menu.entries()) {
+  console.log(`${i+1}: ${el}`);
+}
