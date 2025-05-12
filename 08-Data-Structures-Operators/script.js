@@ -669,17 +669,74 @@ const entries = Object.entries(hours);
 // for (const [key, { open, close }] of entries)
 //   console.log(`On ${key} we open at ${open} and close at ${close} hours.`);
 
-for (const [index, player] of game.scored.entries()){
-  console.log(`Goal ${index+1}: ${player}`);
-}
-
+// for (const [index, player] of game.scored.entries()){
+//   console.log(`Goal ${index+1}: ${player}`);
+// }
 
 const odds = game.odds;
 // console.log(odds);
 
 let sum = 0;
-for (const odd of Object.values(odds)){
-  
+for (const odd of Object.values(odds)) {
   sum += odd;
 }
-console.log(Math.trunc(sum/3));
+// console.log(Math.trunc(sum/3));
+
+//Sets - iterable
+
+const ordersSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta']);
+
+console.log(ordersSet);
+
+console.log(new Set());
+
+console.log(ordersSet.size);
+
+console.log(ordersSet.has('Pizza'));
+
+console.log(ordersSet.has('Chocolate'));
+
+ordersSet.add('Garlic Bread');
+
+console.log(ordersSet);
+
+ordersSet.delete('Risotto');
+
+console.log(ordersSet);
+
+for (const order of ordersSet) console.log(order);
+
+
+const nameVar = 'JustForUniqueValues'
+
+// console.log(new Set(nameVar).size);
+
+const italianFoods = new Set([
+  'pasta',
+  'gnocchi',
+  'tomatoes',
+  'olive oil',
+  'garlic',
+  'basil',
+]);
+
+const mexicanFoods = new Set([
+  'tortillas',
+  'beans',
+  'rice',
+  'tomatoes',
+  'avocado',
+  'garlic',
+]);
+
+const commonFoods = italianFoods.intersection(mexicanFoods);
+console.log('intersection:', commonFoods);
+// console.log([...commonFoods]);
+
+const allFoods = italianFoods.union(mexicanFoods);
+console.log('union:', allFoods);
+// console.log(new Set([...allFoods]));
+
+
+const uniqueFoods = italianFoods.difference(mexicanFoods);
+console.log(uniqueFoods);
