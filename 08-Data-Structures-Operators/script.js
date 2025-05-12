@@ -744,7 +744,7 @@ const rest = new Map();
 rest.set('name', 'Classico Italiano');
 rest.set(1, 'Firenze, Italy');
 rest.set(2, 'Lisbon, Portugal');
-console.log(rest);
+// console.log(rest);
 rest
   .set('categories', [
     'pasta',
@@ -784,19 +784,19 @@ const question = new Map([
   [true, 'Correct!'],
   [false, 'Try Again!'],
 ]);
-console.log(question);
+// console.log(question);
 
 //Objects to Maps
 
 const hoursMap = new Map(Object.entries(hours));
-console.log(hoursMap);
+// console.log(hoursMap);
 
 // Quiz
 
-console.log(question.get('question'));
+// console.log(question.get('question'));
 for (const [key, value] of question) {
   if (typeof key === 'number') {
-    console.log(`Answer ${key}: ${value}`);
+    // console.log(`Answer ${key}: ${value}`);
   }
 }
 // const answer = Number(prompt('Your answer: '));
@@ -806,4 +806,21 @@ for (const [key, value] of question) {
 
 //Map to Array
 
-console.log([...question]);
+// console.log([...question]);
+
+//Working with Strings
+
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+console.log(plane[0]);
+console.log(airline.lastIndexOf('r'));
+console.log(airline.slice(-1));
+
+const email = "hello@joel.io";
+const loginMail = "Hello@Joel.Io"
+
+const lowerEmail = loginMail.toLowerCase();
+console.log(lowerEmail);
+
+const trimmedMail = lowerEmail.trim();
+console.log(trimmedMail);
