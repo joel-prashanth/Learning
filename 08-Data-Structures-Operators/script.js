@@ -686,28 +686,27 @@ for (const odd of Object.values(odds)) {
 
 const ordersSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta']);
 
-console.log(ordersSet);
+// console.log(ordersSet);
 
-console.log(new Set());
+// console.log(new Set());
 
-console.log(ordersSet.size);
+// console.log(ordersSet.size);
 
-console.log(ordersSet.has('Pizza'));
+// console.log(ordersSet.has('Pizza'));
 
-console.log(ordersSet.has('Chocolate'));
+// console.log(ordersSet.has('Chocolate'));
 
 ordersSet.add('Garlic Bread');
 
-console.log(ordersSet);
+// console.log(ordersSet);
 
 ordersSet.delete('Risotto');
 
-console.log(ordersSet);
+// console.log(ordersSet);
 
-for (const order of ordersSet) console.log(order);
+// for (const order of ordersSet) console.log(order);
 
-
-const nameVar = 'JustForUniqueValues'
+const nameVar = 'JustForUniqueValues';
 
 // console.log(new Set(nameVar).size);
 
@@ -730,13 +729,81 @@ const mexicanFoods = new Set([
 ]);
 
 const commonFoods = italianFoods.intersection(mexicanFoods);
-console.log('intersection:', commonFoods);
+// console.log('intersection:', commonFoods);
 // console.log([...commonFoods]);
 
 const allFoods = italianFoods.union(mexicanFoods);
-console.log('union:', allFoods);
+// console.log('union:', allFoods);
 // console.log(new Set([...allFoods]));
 
-
 const uniqueFoods = italianFoods.difference(mexicanFoods);
-console.log(uniqueFoods);
+// console.log(uniqueFoods);
+
+//Maps
+const rest = new Map();
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze, Italy');
+rest.set(2, 'Lisbon, Portugal');
+console.log(rest);
+rest
+  .set('categories', [
+    'pasta',
+    'gnocchi',
+    'tomatoes',
+    'olive oil',
+    'garlic',
+    'basil',
+  ])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open :D')
+  .set(false, 'We are closed :(');
+
+// console.log(rest.get("name"));
+// console.log(rest.get(true));
+
+const time = 0;
+// console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+// console.log(rest.has('categories'));
+
+const arry = [1, 2];
+rest.set(arr, 'Test');
+rest.set(document.querySelector('h1'), 'Heading');
+// console.log(rest);
+// console.log(rest.size);
+
+//Map Iteration
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  [4, 'Python'],
+  ['correct', 3],
+  [true, 'Correct!'],
+  [false, 'Try Again!'],
+]);
+console.log(question);
+
+//Objects to Maps
+
+const hoursMap = new Map(Object.entries(hours));
+console.log(hoursMap);
+
+// Quiz
+
+console.log(question.get('question'));
+for (const [key, value] of question) {
+  if (typeof key === 'number') {
+    console.log(`Answer ${key}: ${value}`);
+  }
+}
+// const answer = Number(prompt('Your answer: '));
+
+// console.log(question.get(question.get('correct') === answer));
+
+
+//Map to Array
+
+console.log([...question]);
